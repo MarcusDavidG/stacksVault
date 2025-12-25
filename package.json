@@ -1,0 +1,24 @@
+{
+  "name": "stacksvault",
+  "version": "1.0.0",
+  "description": "A collection of Stacks projects",
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "workspaces": [
+    "btc-bridge-helper",
+    "contract-verifier",
+    "crowdfund-platform",
+    "dao-governance",
+    "decentralized-lottery",
+    "digital-will",
+    "insurance-pool",
+    "lending-pool",
+    "multisig-wallet",
+    "name-registry",
+    "nft-marketplace",
+    "oracle-registry",
+    "royalty-splitter",
+    "secure-escrow"
+  ]
+}
