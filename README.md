@@ -24,5 +24,7 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 *   **name-registry-v2**: A contract for a name registry (v2).
 *   **nft-marketplace**: A contract for an NFT marketplace.
 *   **nft-marketplace-v2**: A contract for an NFT marketplace (v2).
+*   **oracle-registry**: A contract for an oracle registry.
+*   **oracle-registry-v2**: A contract for an oracle registry (v2).
 *   **time-locked-vault-v1**: A contract for time-locking STX tokens.
 *   **digital-will-v2**: A time-locked inheritance contract.

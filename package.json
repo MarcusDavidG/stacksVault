@@ -28,6 +28,7 @@
     "nft-marketplace",
     "nft-marketplace-v2",
     "oracle-registry",
+    "oracle-registry-v2",
     "royalty-splitter",
     "secure-escrow"
   ]
