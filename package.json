@@ -26,6 +26,7 @@
     "name-registry",
     "name-registry-v2",
     "nft-marketplace",
+    "nft-marketplace-v2",
     "oracle-registry",
     "royalty-splitter",
     "secure-escrow"
