@@ -31,6 +31,7 @@
     "oracle-registry-v2",
     "royalty-splitter",
     "royalty-splitter-v2",
-    "secure-escrow"
+    "secure-escrow",
+    "secure-escrow-v2"
   ]
 }

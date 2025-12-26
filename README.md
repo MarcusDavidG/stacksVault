@@ -28,5 +28,7 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 *   **oracle-registry-v2**: A contract for an oracle registry (v2).
 *   **royalty-splitter**: A contract for splitting royalties.
 *   **royalty-splitter-v2**: A contract for splitting royalties (v2).
+*   **secure-escrow**: A contract for a secure escrow service.
+*   **secure-escrow-v2**: A contract for a secure escrow service (v2).
 *   **time-locked-vault-v1**: A contract for time-locking STX tokens.
 *   **digital-will-v2**: A time-locked inheritance contract.
