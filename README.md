@@ -12,5 +12,7 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 *   **crowdfund-platform-v2**: A contract for crowdfunding campaigns (v2).
 *   **dao-governance**: A contract for decentralized autonomous organization governance.
 *   **dao-governance-v2**: A contract for decentralized autonomous organization governance (v2).
+*   **decentralized-lottery**: A contract for a decentralized lottery.
+*   **decentralized-lottery-v2**: A contract for a decentralized lottery (v2).
 *   **time-locked-vault-v1**: A contract for time-locking STX tokens.
 *   **digital-will-v2**: A time-locked inheritance contract.
