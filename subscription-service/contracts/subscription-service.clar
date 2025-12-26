@@ -14,7 +14,7 @@
 
 ;; Map to store subscription tiers
 ;; key: tier ID (uint)
-;; value: { name: (string-ascii 64), price: uint, duration: uint (in blocks) }
+;; value: { name: (string-ascii 64), price: uint, duration: uint } ; duration in blocks
 (define-map tiers
   uint
   {
@@ -26,7 +26,7 @@
 
 ;; Map to store user subscriptions
 ;; key: user principal
-;; value: { tier-id: uint, subscribed-at: uint (block-height) }
+;; value: { tier-id: uint, subscribed-at: uint } ; subscribed-at block-height
 (define-map subscriptions
   principal
   {
@@ -63,7 +63,7 @@
 (define-public (withdraw (amount uint))
   (begin
     (asserts! (is-eq tx-sender contract-owner) ERR-UNAUTHORIZED)
-    (as-contract (stx-transfer? amount tx-sender contract-owner))
+    (as-contract (stx-transfer? amount tx-sender (as-contract tx-sender)))
   )
 )
 
