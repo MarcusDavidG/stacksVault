@@ -24,6 +24,7 @@
     "multisig-wallet",
     "multisig-wallet-v2",
     "name-registry",
+    "name-registry-v2",
     "nft-marketplace",
     "oracle-registry",
     "royalty-splitter",
