@@ -1,11 +1,11 @@
 [project]
-name = "subscription-service"
+name = "subscription-service-v1"
 description = "A contract for managing recurring subscriptions."
 authors = ["You"]
 telemetry = true
 cache_dir = "./.cache"
 
-[contracts.subscription-service]
+[contracts.subscription-service-v1]
 path = "contracts/subscription-service.clar"
 epoch = "latest"
 
