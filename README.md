@@ -6,4 +6,4 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 
 *   **btc-bridge-helper**: A helper contract for the Stacks bridge.
 *   **contract-verifier**: A contract for verifying other contracts and managing trust.
-*   **subscription-service-v1**: A contract for managing recurring subscriptions.
+*   **time-locked-vault-v1**: A contract for time-locking STX tokens.
