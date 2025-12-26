@@ -18,5 +18,7 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 *   **insurance-pool-v2**: A contract for an insurance pool (v2).
 *   **lending-pool**: A contract for a decentralized lending pool.
 *   **lending-pool-v2**: A contract for a decentralized lending pool (v2).
+*   **multisig-wallet**: A contract for a multi-signature wallet.
+*   **multisig-wallet-v2**: A contract for a multi-signature wallet (v2).
 *   **time-locked-vault-v1**: A contract for time-locking STX tokens.
 *   **digital-will-v2**: A time-locked inheritance contract.
