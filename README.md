@@ -12,6 +12,7 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 *   **contract-verifier-v3**: A contract for verifying other contracts and managing trust (v3).
 *   **crowdfund-platform**: A contract for crowdfunding campaigns.
 *   **crowdfund-platform-v2**: A contract for crowdfunding campaigns (v2).
+*   **crowdfund-platform-v3**: A contract for crowdfunding campaigns (v3).
 *   **dao-governance**: A contract for decentralized autonomous organization governance.
 *   **dao-governance-v2**: A contract for decentralized autonomous organization governance (v2).
 *   **decentralized-lottery**: A contract for a decentralized lottery.
