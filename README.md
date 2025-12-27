@@ -9,6 +9,7 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 *   **btc-bridge-helper-v3**: A helper contract for the Stacks bridge (v3).
 *   **contract-verifier**: A contract for verifying other contracts and managing trust.
 *   **contract-verifier-v2**: A contract for verifying other contracts and managing trust (v2).
+*   **contract-verifier-v3**: A contract for verifying other contracts and managing trust (v3).
 *   **crowdfund-platform**: A contract for crowdfunding campaigns.
 *   **crowdfund-platform-v2**: A contract for crowdfunding campaigns (v2).
 *   **dao-governance**: A contract for decentralized autonomous organization governance.
