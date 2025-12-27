@@ -8,6 +8,7 @@
   "workspaces": [
     "btc-bridge-helper",
     "btc-bridge-helper-v2",
+    "btc-bridge-helper-v3",
     "contract-verifier",
     "contract-verifier-v2",
     "crowdfund-platform",
