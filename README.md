@@ -21,6 +21,7 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 *   **decentralized-lottery-v3**: A contract for a decentralized lottery (v3).
 *   **insurance-pool**: A contract for an insurance pool.
 *   **insurance-pool-v2**: A contract for an insurance pool (v2).
+*   **insurance-pool-v3**: A contract for an insurance pool (v3).
 *   **lending-pool**: A contract for a decentralized lending pool.
 *   **lending-pool-v2**: A contract for a decentralized lending pool (v2).
 *   **multisig-wallet**: A contract for a multi-signature wallet.
