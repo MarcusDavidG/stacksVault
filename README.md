@@ -36,6 +36,7 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 *   **nft-marketplace-v3**: A contract for an NFT marketplace (v3).
 *   **oracle-registry**: A contract for an oracle registry.
 *   **oracle-registry-v2**: A contract for an oracle registry (v2).
+*   **oracle-registry-v3**: A contract for an oracle registry (v3).
 *   **royalty-splitter**: A contract for splitting royalties.
 *   **royalty-splitter-v2**: A contract for splitting royalties (v2).
 *   **secure-escrow**: A contract for a secure escrow service.
