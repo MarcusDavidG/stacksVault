@@ -30,6 +30,7 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 *   **multisig-wallet-v3**: A contract for a multi-signature wallet (v3).
 *   **name-registry**: A contract for a name registry.
 *   **name-registry-v2**: A contract for a name registry (v2).
+*   **name-registry-v3**: A contract for a name registry (v3).
 *   **nft-marketplace**: A contract for an NFT marketplace.
 *   **nft-marketplace-v2**: A contract for an NFT marketplace (v2).
 *   **oracle-registry**: A contract for an oracle registry.
