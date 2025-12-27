@@ -37,3 +37,4 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 *   **secure-escrow-v2**: A contract for a secure escrow service (v2).
 *   **time-locked-vault-v1**: A contract for time-locking STX tokens.
 *   **digital-will-v2**: A time-locked inheritance contract.
+*   **digital-will-v3**: A time-locked inheritance contract (v3).
