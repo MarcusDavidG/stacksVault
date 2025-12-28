@@ -11,6 +11,7 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 *   **contract-verifier**: A contract for verifying other contracts and managing trust.
 *   **contract-verifier-v2**: A contract for verifying other contracts and managing trust (v2).
 *   **contract-verifier-v3**: A contract for verifying other contracts and managing trust (v3).
+*   **contract-verifier-v4**: A contract for verifying other contracts and managing trust (v4).
 *   **crowdfund-platform**: A contract for crowdfunding campaigns.
 *   **crowdfund-platform-v2**: A contract for crowdfunding campaigns (v2).
 *   **crowdfund-platform-v3**: A contract for crowdfunding campaigns (v3).
