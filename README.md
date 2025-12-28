@@ -51,3 +51,4 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 *   **time-locked-vault-v1**: A contract for time-locking STX tokens.
 *   **digital-will-v2**: A time-locked inheritance contract.
 *   **digital-will-v3**: A time-locked inheritance contract (v3).
+*   **digital-will-v4**: A time-locked inheritance contract (v4).
