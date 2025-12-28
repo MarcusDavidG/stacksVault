@@ -7,6 +7,7 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 *   **btc-bridge-helper**: A helper contract for the Stacks bridge.
 *   **btc-bridge-helper-v2**: A helper contract for the Stacks bridge (v2).
 *   **btc-bridge-helper-v3**: A helper contract for the Stacks bridge (v3).
+*   **btc-bridge-helper-v4**: A helper contract for the Stacks bridge (v4).
 *   **contract-verifier**: A contract for verifying other contracts and managing trust.
 *   **contract-verifier-v2**: A contract for verifying other contracts and managing trust (v2).
 *   **contract-verifier-v3**: A contract for verifying other contracts and managing trust (v3).
