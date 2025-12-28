@@ -27,6 +27,7 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 *   **insurance-pool**: A contract for an insurance pool.
 *   **insurance-pool-v2**: A contract for an insurance pool (v2).
 *   **insurance-pool-v3**: A contract for an insurance pool (v3).
+*   **insurance-pool-v4**: A contract for an insurance pool (v4).
 *   **lending-pool**: A contract for a decentralized lending pool.
 *   **lending-pool-v2**: A contract for a decentralized lending pool (v2).
 *   **lending-pool-v3**: A contract for a decentralized lending pool (v3).
