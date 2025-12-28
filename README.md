@@ -19,6 +19,7 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 *   **dao-governance**: A contract for decentralized autonomous organization governance.
 *   **dao-governance-v2**: A contract for decentralized autonomous organization governance (v2).
 *   **dao-governance-v3**: A contract for decentralized autonomous organization governance (v3).
+*   **dao-governance-v4**: A contract for decentralized autonomous organization governance (v4).
 *   **decentralized-lottery**: A contract for a decentralized lottery.
 *   **decentralized-lottery-v2**: A contract for a decentralized lottery (v2).
 *   **decentralized-lottery-v3**: A contract for a decentralized lottery (v3).
