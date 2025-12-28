@@ -42,6 +42,7 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 *   **nft-marketplace**: A contract for an NFT marketplace.
 *   **nft-marketplace-v2**: A contract for an NFT marketplace (v2).
 *   **nft-marketplace-v3**: A contract for an NFT marketplace (v3).
+*   **nft-marketplace-v4**: A contract for an NFT marketplace (v4).
 *   **oracle-registry**: A contract for an oracle registry.
 *   **oracle-registry-v2**: A contract for an oracle registry (v2).
 *   **oracle-registry-v3**: A contract for an oracle registry (v3).
