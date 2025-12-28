@@ -31,6 +31,7 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 *   **lending-pool**: A contract for a decentralized lending pool.
 *   **lending-pool-v2**: A contract for a decentralized lending pool (v2).
 *   **lending-pool-v3**: A contract for a decentralized lending pool (v3).
+*   **lending-pool-v4**: A contract for a decentralized lending pool (v4).
 *   **multisig-wallet**: A contract for a multi-signature wallet.
 *   **multisig-wallet-v2**: A contract for a multi-signature wallet (v2).
 *   **multisig-wallet-v3**: A contract for a multi-signature wallet (v3).
