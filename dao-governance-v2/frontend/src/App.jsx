@@ -1,0 +1,197 @@
+import { SignClient } from "@walletconnect/sign-client";
+import { WalletConnectModal } from "@walletconnect/modal";
+import { useState, useEffect } from "react";
+import { StacksMainnet } from "@stacks/network";
+import { makeContractCall, uintCV, cvToJSON, TransactionVersion } from "@stacks/transactions";
+import { Buffer } from "buffer";
+
+// Polyfill Buffer for WalletConnect and Stacks.js
+if (typeof window !== "undefined") {
+  window.Buffer = window.Buffer || Buffer;
+}
+
+// --- WalletConnect and Contract Configuration -------------------------
+
+const projectId = "a2a35e5bb307e75b7ee528be821f5391"; // Use the provided projectId
+const signClient = new SignClient();
+// modal is exported from main.jsx, so we don't need to re-create it here
+// import { modal } from './main.jsx';
+
+const appMetadata = {
+  name: "DAO Governance V2",
+  description: "A dApp for interacting with the DAO Governance V2 contract.",
+  url: window.location.origin,
+  icons: [window.location.origin + "/vite.svg"],
+};
+
+const network = new StacksMainnet();
+const contractAddress = "SP3VD1Z3MGKB0MRPBH8DS1ZKXNGYW66NH5R6W74XP";
+const contractName = "dao-governance-v2"; // Note the v2 here
+
+// --- React Component ----------------------------------------------------
+
+function App() {
+  const [session, setSession] = useState(null);
+  const [address, setAddress] = useState("");
+  const [txStatus, setTxStatus] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  // Deposit amount state
+  const [depositAmount, setDepositAmount] = useState(1000000); // 1 STX in micro-STX
+
+  // Initialize SignClient
+  async function initializeSignClient() {
+    await signClient.init({
+      projectId,
+      metadata: appMetadata,
+    });
+    // Check for existing sessions
+    if (signClient.session.length > 0) {
+      const lastSession = signClient.session.get(signClient.session.keys.at(-1));
+      setSession(lastSession);
+      const acc = lastSession.namespaces.stacks.accounts[0];
+      setAddress(acc.split(":")[2]);
+    }
+  }
+
+  useEffect(() => {
+    if (!projectId) {
+      console.error("Please provide a projectId from WalletConnect Cloud in main.jsx and App.jsx");
+      return;
+    }
+    initializeSignClient();
+  }, []);
+
+  // Handle WalletConnect connection
+  async function handleConnect() {
+    try {
+      const { uri, approval } = await signClient.connect({
+        requiredNamespaces: {
+          stacks: {
+            methods: ["stacks_signMessage", "stacks_stxTransfer", "stacks_contractCall", "stacks_signTransaction"],
+            chains: ["stacks:1"], // Stacks Mainnet
+            events: [],
+          },
+        },
+      });
+
+      if (uri) {
+        const modal = new WalletConnectModal({ projectId }); // Re-create if not global
+        modal.openModal({ uri });
+      }
+
+      const session = await approval();
+      setSession(session);
+      const acc = session.namespaces.stacks.accounts[0];
+      setAddress(acc.split(":")[2]);
+      const modal = new WalletConnectModal({ projectId }); // Re-create if not global
+      modal.closeModal();
+    } catch (e) {
+      console.error("Error connecting:", e);
+    }
+  }
+
+  // Handle disconnect
+  async function handleDisconnect() {
+    if (session) {
+      await signClient.disconnect({
+        topic: session.topic,
+        reason: { code: 6000, message: "User disconnected" },
+      });
+      setSession(null);
+      setAddress("");
+      setTxStatus("");
+    }
+  }
+
+  // Deposit to Treasury function
+  const depositToTreasury = async () => {
+    if (!address) {
+      alert("Please connect your wallet first.");
+      return;
+    }
+    if (depositAmount <= 0) {
+        alert("Please enter a valid amount to deposit.");
+        return;
+    }
+
+    setLoading(true);
+    setTxStatus("Depositing to treasury...");
+
+    try {
+      const functionArgs = [
+        uintCV(depositAmount),
+      ];
+
+      const txOptions = {
+        contractAddress,
+        contractName,
+        functionName: "deposit-treasury",
+        functionArgs: functionArgs,
+        senderKey: address, // This will be replaced by the wallet's key
+        network,
+        postConditions: [], // Add post-conditions if needed
+        fee: 300, // Example fee
+        nonce: 0, // This will be handled by the wallet
+        txVersion: TransactionVersion.Mainnet,
+      };
+
+      const transaction = await makeContractCall(txOptions);
+      const serializedTx = transaction.serialize().toString("hex");
+
+      const { txid } = await signClient.request({
+        topic: session.topic,
+        chainId: "stacks:1",
+        request: {
+          method: "stx_signTransaction",
+          params: {
+            transaction: serializedTx,
+            network: "mainnet",
+          },
+        },
+      });
+
+      setTxStatus(`Transaction submitted: ${txid}. Please check explorer for status.`);
+    } catch (error) {
+      console.error("Error depositing to treasury:", error);
+      setTxStatus(`Error: ${error.message}`);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>DAO Governance V2</h1>
+        {!address ? (
+          <button onClick={handleConnect}>Connect Wallet</button>
+        ) : (
+          <div>
+            <p>Connected: {address}</p>
+            <button onClick={handleDisconnect}>Disconnect Wallet</button>
+          </div>
+        )}
+
+        <div className="card">
+          <p>Deposit STX to the DAO treasury on Stacks Mainnet.</p>
+          <div>
+            <label>Amount (micro-STX): </label>
+            <input type="number" value={depositAmount} onChange={(e) => setDepositAmount(parseInt(e.target.value) || 0)} />
+          </div>
+          <button onClick={depositToTreasury} disabled={!address || loading || depositAmount <= 0}>
+            {loading ? "Processing..." : "Deposit to Treasury"}
+          </button>
+          {txStatus && (
+            <div className="message-container">
+              <h3>Transaction Status:</h3>
+              <p>{txStatus}</p>
+            </div>
+          )}
+        </div>
+      </header>
+    </div>
+  );
+}
+
+export default App;
