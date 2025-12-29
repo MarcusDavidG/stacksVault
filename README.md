@@ -50,6 +50,7 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 *   **royalty-splitter**: A contract for splitting royalties.
 *   **royalty-splitter-v2**: A contract for splitting royalties (v2).
 *   **royalty-splitter-v3**: A contract for splitting royalties (v3).
+*   **royalty-splitter-v4**: A contract for splitting royalties (v4).
 *   **secure-escrow**: A contract for a secure escrow service.
 *   **secure-escrow-v2**: A contract for a secure escrow service (v2).
 *   **secure-escrow-v3**: A contract for a secure escrow service (v3).
