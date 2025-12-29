@@ -59,3 +59,7 @@ A collection of Clarity smart contracts for the Stacks blockchain.
 *   **digital-will-v2**: A time-locked inheritance contract.
 *   **digital-will-v3**: A time-locked inheritance contract (v3).
 *   **digital-will-v4**: A time-locked inheritance contract (v4).
+
+## SDK Integrations (V1 Projects)
+
+All V1 mini-projects now include WalletConnect SDK integration for wallet connection and smart contract interactions. Each project's `frontend` directory contains a basic React application demonstrating core functionalities.
