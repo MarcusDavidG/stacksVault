@@ -129,3 +129,44 @@ MIT License
 
 ##  Author
 Marcus David
+## Stacks SDK Integration V3
+
+### Installation
+```bash
+npm install @stacks/transactions @stacks/network @stacks/auth @stacks/connect
+```
+
+### SDK Usage
+```typescript
+import { BtcbridgehelperSDK } from './src/stacks-sdk';
+
+// Initialize SDK
+const sdk = new BtcbridgehelperSDK(false); // false for testnet
+
+// Execute contract functions
+await sdk.executeFunction(senderKey, 'function-name', args);
+
+// Read-only function calls
+const result = await sdk.readOnlyFunction('get-info', []);
+
+// Batch operations
+const operations = [
+  { functionName: 'function-1', args: [] },
+  { functionName: 'function-2', args: [] }
+];
+await sdk.batchExecute(senderKey, operations);
+```
+
+### Frontend Integration
+The frontend includes advanced React components with Stacks Connect integration:
+- Seamless wallet connection and authentication
+- Enhanced contract interaction interface
+- Real-time transaction monitoring
+- Comprehensive error handling and user feedback
+
+### Testing
+```bash
+npm run test:sdk      # Run SDK-specific tests
+npm run test:coverage # Run tests with coverage
+npm test              # Run all tests
+```
