@@ -129,3 +129,37 @@ MIT License
 
 ##  Author
 Marcus David
+
+## Stacks SDK Integration V2
+
+### Installation
+```bash
+npm install @stacks/transactions @stacks/network @stacks/auth @stacks/connect
+```
+
+### SDK Usage
+```typescript
+import { BtcBridgeHelperV2SDK } from './src/stacks-sdk';
+
+// Initialize SDK
+const sdk = new BtcBridgeHelperV2SDK(false); // false for testnet
+
+// Initiate bridge with metadata
+await sdk.initiateBridgeV2(senderKey, amount, btcAddress, metadata);
+
+// Validate bridge request
+await sdk.validateBridgeRequest(senderKey, bridgeId);
+```
+
+### Frontend Integration
+The frontend includes enhanced React components with Stacks Connect integration:
+- Advanced wallet connection via Stacks Connect
+- Bridge initiation interface with metadata support
+- Real-time transaction status tracking
+- Enhanced validation and error handling
+
+### Testing
+```bash
+npm run test:sdk  # Run SDK-specific tests
+npm test         # Run all tests
+```
