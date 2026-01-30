@@ -10,14 +10,47 @@
 
 **Deployer:** `ST3P3DPDB69YP0Z259SS6MSA16GBQEBF8KG8P96D2`
 
-##  Overview
+## Overview
 A cross-chain messaging and formatting system for Bitcoin-Stacks interoperability. Handles Bitcoin address validation, message formatting, and cross-chain data conversion. Showcases **Clarity 4's to-ascii** string conversion functionality.
 
-##  Key Features
+## Key Features
 - **Cross-chain messaging**: Format data for Bitcoin/Stacks communication
 - **String conversion**: Convert uints to ASCII (Clarity 4 feature)
 - ₿ **Bitcoin address validation**: Verify BTC address format
 - **Message tracking**: Store and confirm cross-chain messages
+
+## Stacks SDK Integration
+
+### Installation
+```bash
+npm install @stacks/transactions @stacks/network @stacks/auth @stacks/connect
+```
+
+### SDK Usage
+```typescript
+import { BtcBridgeHelperSDK } from './src/stacks-sdk';
+
+// Initialize SDK
+const sdk = new BtcBridgeHelperSDK(false); // false for testnet
+
+// Initiate bridge
+await sdk.initiateBridge(senderKey, amount, btcAddress);
+
+// Complete bridge
+await sdk.completeBridge(senderKey, bridgeId);
+```
+
+### Frontend Integration
+The frontend includes a React component with Stacks Connect integration:
+- Wallet connection via Stacks Connect
+- Bridge initiation interface
+- Transaction status tracking
+
+### Testing
+```bash
+npm run test:sdk  # Run SDK-specific tests
+npm test         # Run all tests
+```
 - **Bridge fees**: Configurable fee system for sustainability
 
 ##  Use Cases
