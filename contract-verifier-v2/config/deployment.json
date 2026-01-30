@@ -1,0 +1,16 @@
+{
+  "testnet": {
+    "contractAddress": "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM",
+    "contractName": "contract-verifier-v2",
+    "deployerAddress": "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM",
+    "networkUrl": "https://stacks-node-api.testnet.stacks.co",
+    "explorerUrl": "https://explorer.hiro.so"
+  },
+  "mainnet": {
+    "contractAddress": "SP1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM",
+    "contractName": "contract-verifier-v2",
+    "deployerAddress": "SP1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM",
+    "networkUrl": "https://stacks-node-api.mainnet.stacks.co",
+    "explorerUrl": "https://explorer.hiro.so"
+  }
+}
