@@ -170,3 +170,70 @@ npm run test:sdk      # Run SDK-specific tests
 npm run test:coverage # Run tests with coverage
 npm test              # Run all tests
 ```
+
+## Advanced Features
+
+### Performance Analytics
+- Real-time transaction monitoring
+- User activity tracking
+- Performance metrics and reporting
+- Gas optimization insights
+
+### Security Features
+- Input validation and sanitization
+- Role-based access control
+- Transaction security checks
+- Comprehensive error handling
+
+### API Integration
+- Stacks blockchain API integration
+- Real-time event monitoring
+- Contract health checks
+- Network status tracking
+
+### Configuration Management
+- Environment-specific configurations
+- Deployment settings for testnet/mainnet
+- Contract function mappings
+- Network parameter management
+
+## Development
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+- Clarinet CLI
+- Stacks wallet for testing
+
+### Installation
+```bash
+npm install
+npm run build
+```
+
+### Testing
+```bash
+npm test                # Run all tests
+npm run test:sdk        # Run SDK tests
+npm run test:coverage   # Run with coverage
+npm run test:watch      # Watch mode
+```
+
+### Deployment
+```bash
+npm run deploy:testnet  # Deploy to testnet
+npm run deploy:mainnet  # Deploy to mainnet
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests for new functionality
+5. Ensure all tests pass
+6. Submit a pull request
+
+## License
+
+MIT License - see LICENSE file for details.
