@@ -36,3 +36,26 @@ export class ContractverifierSDK {
     return await broadcastTransaction(transaction, this.network);
   }
 }
+
+  // Enhanced features using helpers
+  private helpers: StacksHelpers;
+
+  initializeHelpers() {
+    this.helpers = new StacksHelpers(this.network, this.contractAddress, this.contractName);
+  }
+
+  async getBalance(address: string): Promise<number> {
+    if (!this.helpers) this.initializeHelpers();
+    return await this.helpers.getContractBalance(address);
+  }
+
+  async waitForConfirmation(txId: string): Promise<boolean> {
+    if (!this.helpers) this.initializeHelpers();
+    return await this.helpers.waitForTransaction(txId);
+  }
+
+  formatAmount(microSTX: number): string {
+    if (!this.helpers) this.initializeHelpers();
+    return this.helpers.formatSTXAmount(microSTX);
+  }
+}
