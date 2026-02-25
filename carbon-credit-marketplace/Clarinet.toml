@@ -1,0 +1,14 @@
+[project]
+name = "carbon-credit-marketplace"
+description = "Trade verified carbon credits on Stacks blockchain"
+authors = ["Marcus David"]
+telemetry = true
+cache_dir = "./.cache"
+
+[contracts.carbon-credit-marketplace]
+path = "contracts/carbon-credit-marketplace.clar"
+epoch = "latest"
+
+[repl.analysis]
+passes = ["check_checker"]
+check_checker = { trusted_sender = false, trusted_caller = false, callee_filter = false }
