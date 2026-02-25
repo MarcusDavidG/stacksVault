@@ -4,7 +4,7 @@ A collection of Clarity smart contracts for the Stacks blockchain with comprehen
 
 ## 🚀 Major Update: Complete Stacks SDK Integration
 
-**200 meaningful commits completed!** Every project now includes:
+
 
 ### ✨ Core Features Added
 - **Stacks SDK Integration**: Complete integration with @stacks/transactions, @stacks/network, @stacks/auth, and @stacks/connect
