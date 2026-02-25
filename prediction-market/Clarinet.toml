@@ -1,0 +1,14 @@
+[project]
+name = "prediction-market"
+description = "Decentralized prediction market on Stacks blockchain"
+authors = ["Marcus David"]
+telemetry = true
+cache_dir = "./.cache"
+
+[contracts.prediction-market]
+path = "contracts/prediction-market.clar"
+epoch = "latest"
+
+[repl.analysis]
+passes = ["check_checker"]
+check_checker = { trusted_sender = false, trusted_caller = false, callee_filter = false }
