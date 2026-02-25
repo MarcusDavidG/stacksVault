@@ -82,6 +82,14 @@ A collection of Clarity smart contracts for the Stacks blockchain with comprehen
 *   **digital-will-v3**: A time-locked inheritance contract (v3).
 *   **digital-will-v4**: A time-locked inheritance contract (v4).
 
+## 🚀 New Mainnet-Ready Contracts (2026)
+
+*   **carbon-credit-marketplace**: Trade verified carbon credits with marketplace functionality
+*   **prediction-market**: Decentralized betting on future events with oracle resolution
+*   **subscription-manager**: Recurring payment management for SaaS and services
+*   **reputation-system**: On-chain reputation scoring with staking mechanisms
+*   **asset-tokenizer**: Tokenize real-world assets for fractional ownership
+
 ## 🔧 Quick Start
 
 ### Prerequisites
@@ -124,12 +132,13 @@ npm run test:coverage   # Run with coverage
 
 ## 📊 Project Statistics
 
-- **Total Projects**: 50+ smart contracts
-- **SDK Integration**: 100% coverage
-- **Test Coverage**: Comprehensive test suites
-- **Documentation**: Complete API documentation
+- **Total Projects**: 55+ smart contracts (5 new mainnet-ready)
+- **SDK Integration**: 100% coverage across all contracts
+- **Test Coverage**: Comprehensive test suites with analytics
+- **Documentation**: Complete API documentation and examples
 - **Security Features**: Advanced validation and access control
 - **Performance Monitoring**: Real-time analytics and monitoring
+- **Mainnet Ready**: 5 production-ready contracts for immediate deployment
 
 ## 🏗 Architecture
 
