@@ -1,0 +1,14 @@
+[project]
+name = "subscription-manager"
+description = "Recurring payment management on Stacks blockchain"
+authors = ["Marcus David"]
+telemetry = true
+cache_dir = "./.cache"
+
+[contracts.subscription-manager]
+path = "contracts/subscription-manager.clar"
+epoch = "latest"
+
+[repl.analysis]
+passes = ["check_checker"]
+check_checker = { trusted_sender = false, trusted_caller = false, callee_filter = false }
