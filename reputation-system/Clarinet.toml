@@ -1,0 +1,14 @@
+[project]
+name = "reputation-system"
+description = "On-chain reputation scoring system on Stacks blockchain"
+authors = ["Marcus David"]
+telemetry = true
+cache_dir = "./.cache"
+
+[contracts.reputation-system]
+path = "contracts/reputation-system.clar"
+epoch = "latest"
+
+[repl.analysis]
+passes = ["check_checker"]
+check_checker = { trusted_sender = false, trusted_caller = false, callee_filter = false }
